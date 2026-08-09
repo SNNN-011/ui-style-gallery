@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI Style Gallery — 84 Styles</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0E1512;color:#E7F0EA;font-family:Inter,system-ui,sans-serif;min-height:100vh}
+.wrap{max-width:1180px;margin:0 auto;padding:40px 28px 80px}
+h1{font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.02em;margin-bottom:8px}
+.sub{color:#8FA99A;margin-bottom:28px;font-size:15px}
+.sub b{color:#34D399}
+.search{width:100%;max-width:520px;padding:14px 20px;font-size:15px;border-radius:14px;border:1px solid #1F3A2C;background:#0F1A14;color:#E7F0EA;outline:none;margin-bottom:34px}
+.search:focus{border-color:#10B981;box-shadow:0 0 0 3px rgba(16,185,129,.15)}
+.search::placeholder{color:#5C7A68}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.card{background:#111B15;border:1px solid #1F3A2C;border-radius:16px;padding:18px;transition:transform .18s ease,border-color .18s ease;display:none}
+.card.show{display:block}
+.card:hover{transform:translateY(-4px);border-color:#10B981}
+.c-link{text-decoration:none;color:inherit;display:block}
+.c-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.c-no{font-size:11px;font-weight:800;color:#34D399;font-family:'JetBrains Mono',monospace;border:1px solid #1F3A2C;padding:3px 8px;border-radius:8px}
+.c-type{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:#8FA99A}
+.card h3{font-size:15.5px;line-height:1.3;margin-bottom:14px}
+.dots{display:flex;gap:5px}
+.dots span{width:22px;height:22px;border-radius:7px;border:1px solid rgba(255,255,255,.15)}
+.count{font-size:13px;color:#8FA99A;margin-bottom:20px}
+footer{margin-top:60px;font-size:13px;color:#5C7A68;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>UI Style Gallery</h1>
+<p class="sub"><b>84 halaman demo</b> — tiap style punya layout &amp; komponen khas berbeda</p>
+<input class="search" id="q" placeholder="Cari style... (mis. neumorphism, dark, brutal, bento)">
+<p class="count" id="count">Menampilkan 84 style</p>
+<div class="grid">
+<div class="card" data-name="minimalism &amp; swiss style" data-type="general">
+<a href="styles/style-01.html" class="c-link">
+<div class="c-top"><span class="c-no">01</span><span class="c-type">General</span></div>
+<h3>Minimalism &amp; Swiss Style</h3>
+<div class="dots"><span style="background:#000000" title="Black #000000"></span><span style="background:#FFFFFF" title="White #FFFFFF"></span><span style="background:#F5F1E8" title="Neutral (Beige #F5F1E8"></span><span style="background:#808080" title="Grey #808080"></span><span style="background:#B38B6D" title="Taupe #B38B6D"></span></div>
+</a>
+</div>
+<div class="card" data-name="neumorphism" data-type="general">
+<a href="styles/style-02.html" class="c-link">
+<div class="c-top"><span class="c-no">02</span><span class="c-type">General</span></div>
+<h3>Neumorphism</h3>
+<div class="dots"><span style="background:#C8E0F4" title="Light pastels: Soft Blue #C8E0F4"></span><span style="background:#F5E0E8" title="Soft Pink #F5E0E8"></span><span style="background:#E8E8E8" title="Soft Grey #E8E8E8"></span></div>
+</a>
+</div>
+<div class="card" data-name="glassmorphism" data-type="general">
+<a href="styles/style-03.html" class="c-link">
+<div class="c-top"><span class="c-no">03</span><span class="c-type">General</span></div>
+<h3>Glassmorphism</h3>
+<div class="dots"><span style="background:#0080FF" title="Vibrant: Electric Blue #0080FF"></span><span style="background:#8B00FF" title="Neon Purple #8B00FF"></span><span style="background:#FF1493" title="Vivid Pink #FF1493"></span><span style="background:#20B2AA" title="Teal #20B2AA"></span></div>
+</a>
+</div>
+<div class="card" data-name="brutalism" data-type="general">
+<a href="styles/style-04.html" class="c-link">
+<div class="c-top"><span class="c-no">04</span><span class="c-type">General</span></div>
+<h3>Brutalism</h3>
+<div class="dots"><span style="background:#FF0000" title="Primary: Red #FF0000"></span><span style="background:#0000FF" title="Blue #0000FF"></span><span style="background:#FFFF00" title="Yellow #FFFF00"></span><span style="background:#000000" title="Black #000000"></span><span style="background:#FFFFFF" title="White #FFFFFF"></span><span style="background:#00FF00" title="Limited: Neon Green #00FF00"></span></div>
+</a>
+</div>
+<div class="card" data-name="3d &amp; hyperrealism" data-type="general">
+<a href="styles/style-05.html" class="c-link">
+<div class="c-top"><span class="c-no">05</span><span class="c-type">General</span></div>
+<h3>3D &amp; Hyperrealism</h3>
+<div class="dots"><span style="background:#001F3F" title="Deep Navy #001F3F"></span><span style="background:#228B22" title="Forest Green #228B22"></span><span style="background:#800020" title="Burgundy #800020"></span><span style="background:#FFD700" title="Gold #FFD700"></span><span style="background:#C0C0C0" title="Silver #C0C0C0"></span></div>
+</a>
+</div>
+<div class="card" data-name="vibrant &amp; block-based" data-type="general">
+<a href="styles/style-06.html" class="c-link">
+<div class="c-top"><span class="c-no">06</span><span class="c-type">General</span></div>
+<h3>Vibrant &amp; Block-based</h3>
+<div class="dots"><span style="background:#39FF14" title="Neon Green #39FF14"></span><span style="background:#BF00FF" title="Electric Purple #BF00FF"></span><span style="background:#FF1493" title="Vivid Pink #FF1493"></span><span style="background:#00FFFF" title="Bright Cyan #00FFFF"></span><span style="background:#FFAA00" title="Sunburst #FFAA00"></span><span style="background:#FF7F00" title="Complementary: Orange #FF7F00"></span></div>
+</a>
+</div>
+<div class="card" data-name="dark mode (oled)" data-type="general">
+<a href="styles/style-07.html" class="c-link">
+<div class="c-top"><span class="c-no">07</span><span class="c-type">General</span></div>
+<h3>Dark Mode (OLED)</h3>
+<div class="dots"><span style="background:#000000" title="Deep Black #000000"></span><span style="background:#121212" title="Dark Grey #121212"></span><span style="background:#0A0E27" title="Midnight Blue #0A0E27"></span><span style="background:#39FF14" title="Vibrant accents: Neon Green #39FF14"></span><span style="background:#0080FF" title="Electric Blue #0080FF"></span><span style="background:#FFD700" title="Gold #FFD700"></span></div>
+</a>
+</div>
+<div class="card" data-name="accessible &amp; ethical" data-type="general">
+<a href="styles/style-08.html" class="c-link">
+<div class="c-top"><span class="c-no">08</span><span class="c-type">General</span></div>
+<h3>Accessible &amp; Ethical</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="claymorphism" data-type="general">
+<a href="styles/style-09.html" class="c-link">
+<div class="c-top"><span class="c-no">09</span><span class="c-type">General</span></div>
+<h3>Claymorphism</h3>
+<div class="dots"><span style="background:#FDBCB4" title="Pastel: Soft Peach #FDBCB4"></span><span style="background:#ADD8E6" title="Baby Blue #ADD8E6"></span><span style="background:#98FF98" title="Mint #98FF98"></span><span style="background:#E6E6FA" title="Lilac #E6E6FA"></span></div>
+</a>
+</div>
+<div class="card" data-name="aurora ui" data-type="general">
+<a href="styles/style-10.html" class="c-link">
+<div class="c-top"><span class="c-no">10</span><span class="c-type">General</span></div>
+<h3>Aurora UI</h3>
+<div class="dots"><span style="background:#0080FF" title="Electric Blue #0080FF"></span><span style="background:#FF1493" title="Magenta #FF1493"></span><span style="background:#00FFFF" title="Cyan #00FFFF"></span></div>
+</a>
+</div>
+<div class="card" data-name="retro-futurism" data-type="general">
+<a href="styles/style-11.html" class="c-link">
+<div class="c-top"><span class="c-no">11</span><span class="c-type">General</span></div>
+<h3>Retro-Futurism</h3>
+<div class="dots"><span style="background:#0080FF" title="Neon Blue #0080FF"></span><span style="background:#FF006E" title="Hot Pink #FF006E"></span><span style="background:#00FFFF" title="Cyan #00FFFF"></span><span style="background:#1A1A2E" title="Deep Black #1A1A2E"></span><span style="background:#5D34D0" title="Purple #5D34D0"></span><span style="background:#C0C0C0" title="Metallic Silver #C0C0C0"></span></div>
+</a>
+</div>
+<div class="card" data-name="flat design" data-type="general">
+<a href="styles/style-12.html" class="c-link">
+<div class="c-top"><span class="c-no">12</span><span class="c-type">General</span></div>
+<h3>Flat Design</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="skeuomorphism" data-type="general">
+<a href="styles/style-13.html" class="c-link">
+<div class="c-top"><span class="c-no">13</span><span class="c-type">General</span></div>
+<h3>Skeuomorphism</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="liquid glass" data-type="general">
+<a href="styles/style-14.html" class="c-link">
+<div class="c-top"><span class="c-no">14</span><span class="c-type">General</span></div>
+<h3>Liquid Glass</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="motion-driven" data-type="general">
+<a href="styles/style-15.html" class="c-link">
+<div class="c-top"><span class="c-no">15</span><span class="c-type">General</span></div>
+<h3>Motion-Driven</h3>
+<div class="dots"><span style="background:#22C55E" title="success (Green #22C55E"></span><span style="background:#EF4444" title="error (Red #EF4444"></span></div>
+</a>
+</div>
+<div class="card" data-name="micro-interactions" data-type="general">
+<a href="styles/style-16.html" class="c-link">
+<div class="c-top"><span class="c-no">16</span><span class="c-type">General</span></div>
+<h3>Micro-interactions</h3>
+<div class="dots"><span style="background:#22C55E" title="feedback: Green #22C55E"></span><span style="background:#EF4444" title="Red #EF4444"></span><span style="background:#F59E0B" title="Amber #F59E0B"></span></div>
+</a>
+</div>
+<div class="card" data-name="inclusive design" data-type="general">
+<a href="styles/style-17.html" class="c-link">
+<div class="c-top"><span class="c-no">17</span><span class="c-type">General</span></div>
+<h3>Inclusive Design</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="zero interface" data-type="general">
+<a href="styles/style-18.html" class="c-link">
+<div class="c-top"><span class="c-no">18</span><span class="c-type">General</span></div>
+<h3>Zero Interface</h3>
+<div class="dots"><span style="background:#FAFAFA" title="Neutral backgrounds: Soft white #FAFAFA"></span><span style="background:#F0F0F0" title="light grey #F0F0F0"></span><span style="background:#F5F1E8" title="warm off-white #F5F1E8"></span></div>
+</a>
+</div>
+<div class="card" data-name="soft ui evolution" data-type="general">
+<a href="styles/style-19.html" class="c-link">
+<div class="c-top"><span class="c-no">19</span><span class="c-type">General</span></div>
+<h3>Soft UI Evolution</h3>
+<div class="dots"><span style="background:#87CEEB" title="Improved contrast pastels: Soft Blue #87CEEB"></span><span style="background:#FFB6C1" title="Soft Pink #FFB6C1"></span><span style="background:#90EE90" title="Soft Green #90EE90"></span></div>
+</a>
+</div>
+<div class="card" data-name="hero-centric design" data-type="landing page">
+<a href="styles/style-20.html" class="c-link">
+<div class="c-top"><span class="c-no">20</span><span class="c-type">Landing Page</span></div>
+<h3>Hero-Centric Design</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="conversion-optimized" data-type="landing page">
+<a href="styles/style-21.html" class="c-link">
+<div class="c-top"><span class="c-no">21</span><span class="c-type">Landing Page</span></div>
+<h3>Conversion-Optimized</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="feature-rich showcase" data-type="landing page">
+<a href="styles/style-22.html" class="c-link">
+<div class="c-top"><span class="c-no">22</span><span class="c-type">Landing Page</span></div>
+<h3>Feature-Rich Showcase</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="minimal &amp; direct" data-type="landing page">
+<a href="styles/style-23.html" class="c-link">
+<div class="c-top"><span class="c-no">23</span><span class="c-type">Landing Page</span></div>
+<h3>Minimal &amp; Direct</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="social proof-focused" data-type="landing page">
+<a href="styles/style-24.html" class="c-link">
+<div class="c-top"><span class="c-no">24</span><span class="c-type">Landing Page</span></div>
+<h3>Social Proof-Focused</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="interactive product demo" data-type="landing page">
+<a href="styles/style-25.html" class="c-link">
+<div class="c-top"><span class="c-no">25</span><span class="c-type">Landing Page</span></div>
+<h3>Interactive Product Demo</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="trust &amp; authority" data-type="landing page">
+<a href="styles/style-26.html" class="c-link">
+<div class="c-top"><span class="c-no">26</span><span class="c-type">Landing Page</span></div>
+<h3>Trust &amp; Authority</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="storytelling-driven" data-type="landing page">
+<a href="styles/style-27.html" class="c-link">
+<div class="c-top"><span class="c-no">27</span><span class="c-type">Landing Page</span></div>
+<h3>Storytelling-Driven</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="data-dense dashboard" data-type="bi/analytics">
+<a href="styles/style-28.html" class="c-link">
+<div class="c-top"><span class="c-no">28</span><span class="c-type">BI/Analytics</span></div>
+<h3>Data-Dense Dashboard</h3>
+<div class="dots"><span style="background:#F5F5F5" title="Neutral primary (light grey/white #F5F5F5"></span><span style="background:#333333" title="dark text #333333"></span><span style="background:#22C55E" title="Chart colors: success (green #22C55E"></span><span style="background:#F59E0B" title="warning (amber #F59E0B"></span><span style="background:#EF4444" title="alert (red #EF4444"></span></div>
+</a>
+</div>
+<div class="card" data-name="heat map &amp; heatmap style" data-type="bi/analytics">
+<a href="styles/style-29.html" class="c-link">
+<div class="c-top"><span class="c-no">29</span><span class="c-type">BI/Analytics</span></div>
+<h3>Heat Map &amp; Heatmap Style</h3>
+<div class="dots"><span style="background:#0080FF" title="Gradient scale: Cool (blue #0080FF"></span><span style="background:#FF0000" title="Gradient scale: Cool (blue #0080FF) to hot (red #FF0000"></span></div>
+</a>
+</div>
+<div class="card" data-name="executive dashboard" data-type="bi/analytics">
+<a href="styles/style-30.html" class="c-link">
+<div class="c-top"><span class="c-no">30</span><span class="c-type">BI/Analytics</span></div>
+<h3>Executive Dashboard</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="real-time monitoring" data-type="bi/analytics">
+<a href="styles/style-31.html" class="c-link">
+<div class="c-top"><span class="c-no">31</span><span class="c-type">BI/Analytics</span></div>
+<h3>Real-Time Monitoring</h3>
+<div class="dots"><span style="background:#FF0000" title="Alert colors: critical (red #FF0000"></span><span style="background:#FFA500" title="warning (orange #FFA500"></span><span style="background:#22C55E" title="normal (green #22C55E"></span></div>
+</a>
+</div>
+<div class="card" data-name="drill-down analytics" data-type="bi/analytics">
+<a href="styles/style-32.html" class="c-link">
+<div class="c-top"><span class="c-no">32</span><span class="c-type">BI/Analytics</span></div>
+<h3>Drill-Down Analytics</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="comparative analysis dashboard" data-type="bi/analytics">
+<a href="styles/style-33.html" class="c-link">
+<div class="c-top"><span class="c-no">33</span><span class="c-type">BI/Analytics</span></div>
+<h3>Comparative Analysis Dashboard</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="predictive analytics" data-type="bi/analytics">
+<a href="styles/style-34.html" class="c-link">
+<div class="c-top"><span class="c-no">34</span><span class="c-type">BI/Analytics</span></div>
+<h3>Predictive Analytics</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="user behavior analytics" data-type="bi/analytics">
+<a href="styles/style-35.html" class="c-link">
+<div class="c-top"><span class="c-no">35</span><span class="c-type">BI/Analytics</span></div>
+<h3>User Behavior Analytics</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="financial dashboard" data-type="bi/analytics">
+<a href="styles/style-36.html" class="c-link">
+<div class="c-top"><span class="c-no">36</span><span class="c-type">BI/Analytics</span></div>
+<h3>Financial Dashboard</h3>
+<div class="dots"><span style="background:#22C55E" title="Financial colors: profit (green #22C55E"></span><span style="background:#EF4444" title="loss (red #EF4444"></span><span style="background:#003366" title="trust (dark blue #003366"></span></div>
+</a>
+</div>
+<div class="card" data-name="sales intelligence dashboard" data-type="bi/analytics">
+<a href="styles/style-37.html" class="c-link">
+<div class="c-top"><span class="c-no">37</span><span class="c-type">BI/Analytics</span></div>
+<h3>Sales Intelligence Dashboard</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="neubrutalism" data-type="general">
+<a href="styles/style-38.html" class="c-link">
+<div class="c-top"><span class="c-no">38</span><span class="c-type">General</span></div>
+<h3>Neubrutalism</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="bento box grid" data-type="general">
+<a href="styles/style-39.html" class="c-link">
+<div class="c-top"><span class="c-no">39</span><span class="c-type">General</span></div>
+<h3>Bento Box Grid</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="y2k aesthetic" data-type="general">
+<a href="styles/style-40.html" class="c-link">
+<div class="c-top"><span class="c-no">40</span><span class="c-type">General</span></div>
+<h3>Y2K Aesthetic</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="cyberpunk ui" data-type="general">
+<a href="styles/style-41.html" class="c-link">
+<div class="c-top"><span class="c-no">41</span><span class="c-type">General</span></div>
+<h3>Cyberpunk UI</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="organic biophilic" data-type="general">
+<a href="styles/style-42.html" class="c-link">
+<div class="c-top"><span class="c-no">42</span><span class="c-type">General</span></div>
+<h3>Organic Biophilic</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="ai-native ui" data-type="general">
+<a href="styles/style-43.html" class="c-link">
+<div class="c-top"><span class="c-no">43</span><span class="c-type">General</span></div>
+<h3>AI-Native UI</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="memphis design" data-type="general">
+<a href="styles/style-44.html" class="c-link">
+<div class="c-top"><span class="c-no">44</span><span class="c-type">General</span></div>
+<h3>Memphis Design</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="vaporwave" data-type="general">
+<a href="styles/style-45.html" class="c-link">
+<div class="c-top"><span class="c-no">45</span><span class="c-type">General</span></div>
+<h3>Vaporwave</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="dimensional layering" data-type="general">
+<a href="styles/style-46.html" class="c-link">
+<div class="c-top"><span class="c-no">46</span><span class="c-type">General</span></div>
+<h3>Dimensional Layering</h3>
+<div class="dots"><span style="background:#FFFFFF" title="Neutral base ( #FFFFFF"></span></div>
+</a>
+</div>
+<div class="card" data-name="exaggerated minimalism" data-type="general">
+<a href="styles/style-47.html" class="c-link">
+<div class="c-top"><span class="c-no">47</span><span class="c-type">General</span></div>
+<h3>Exaggerated Minimalism</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="kinetic typography" data-type="general">
+<a href="styles/style-48.html" class="c-link">
+<div class="c-top"><span class="c-no">48</span><span class="c-type">General</span></div>
+<h3>Kinetic Typography</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="parallax storytelling" data-type="general">
+<a href="styles/style-49.html" class="c-link">
+<div class="c-top"><span class="c-no">49</span><span class="c-type">General</span></div>
+<h3>Parallax Storytelling</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="swiss modernism 2.0" data-type="general">
+<a href="styles/style-50.html" class="c-link">
+<div class="c-top"><span class="c-no">50</span><span class="c-type">General</span></div>
+<h3>Swiss Modernism 2.0</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="hud / sci-fi fui" data-type="general">
+<a href="styles/style-51.html" class="c-link">
+<div class="c-top"><span class="c-no">51</span><span class="c-type">General</span></div>
+<h3>HUD / Sci-Fi FUI</h3>
+<div class="dots"><span style="background:#00FFFF" title="Neon Cyan #00FFFF"></span><span style="background:#0080FF" title="Holographic Blue #0080FF"></span><span style="background:#FF0000" title="Alert Red #FF0000"></span><span style="background:#333333" title="Grid Lines #333333"></span></div>
+</a>
+</div>
+<div class="card" data-name="pixel art" data-type="general">
+<a href="styles/style-52.html" class="c-link">
+<div class="c-top"><span class="c-no">52</span><span class="c-type">General</span></div>
+<h3>Pixel Art</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="bento grids" data-type="general">
+<a href="styles/style-53.html" class="c-link">
+<div class="c-top"><span class="c-no">53</span><span class="c-type">General</span></div>
+<h3>Bento Grids</h3>
+<div class="dots"><span style="background:#F5F5F7" title="Off-white #F5F5F7"></span><span style="background:#FFFFFF" title="Clean White #FFFFFF"></span><span style="background:#1D1D1F" title="Text #1D1D1F"></span></div>
+</a>
+</div>
+<div class="card" data-name="spatial ui (visionos)" data-type="general">
+<a href="styles/style-55.html" class="c-link">
+<div class="c-top"><span class="c-no">55</span><span class="c-type">General</span></div>
+<h3>Spatial UI (VisionOS)</h3>
+<div class="dots"><span style="background:#FFFFFF" title="Frosted Glass #FFFFFF"></span></div>
+</a>
+</div>
+<div class="card" data-name="e-ink / paper" data-type="general">
+<a href="styles/style-56.html" class="c-link">
+<div class="c-top"><span class="c-no">56</span><span class="c-type">General</span></div>
+<h3>E-Ink / Paper</h3>
+<div class="dots"><span style="background:#FDFBF7" title="Off-White #FDFBF7"></span><span style="background:#F5F5F5" title="Paper White #F5F5F5"></span><span style="background:#1A1A1A" title="Ink Black #1A1A1A"></span><span style="background:#4A4A4A" title="Pencil Grey #4A4A4A"></span><span style="background:#FFFF00" title="Highlighter Yellow #FFFF00"></span></div>
+</a>
+</div>
+<div class="card" data-name="gen z chaos / maximalism" data-type="general">
+<a href="styles/style-57.html" class="c-link">
+<div class="c-top"><span class="c-no">57</span><span class="c-type">General</span></div>
+<h3>Gen Z Chaos / Maximalism</h3>
+<div class="dots"><span style="background:#FF00FF" title="Clashing Brights #FF00FF"></span></div>
+</a>
+</div>
+<div class="card" data-name="biomimetic / organic 2.0" data-type="general">
+<a href="styles/style-58.html" class="c-link">
+<div class="c-top"><span class="c-no">58</span><span class="c-type">General</span></div>
+<h3>Biomimetic / Organic 2.0</h3>
+<div class="dots"><span style="background:#FF9999" title="Cellular Pink #FF9999"></span><span style="background:#00FF41" title="Chlorophyll Green #00FF41"></span><span style="background:#001E3C" title="Deep Ocean #001E3C"></span><span style="background:#FF7F50" title="Coral #FF7F50"></span></div>
+</a>
+</div>
+<div class="card" data-name="anti-polish / raw aesthetic" data-type="general">
+<a href="styles/style-59.html" class="c-link">
+<div class="c-top"><span class="c-no">59</span><span class="c-type">General</span></div>
+<h3>Anti-Polish / Raw Aesthetic</h3>
+<div class="dots"><span style="background:#FAFAF8" title="Paper White #FAFAF8"></span><span style="background:#4A4A4A" title="Pencil Grey #4A4A4A"></span><span style="background:#1A1A1A" title="Marker Black #1A1A1A"></span><span style="background:#C4A77D" title="Kraft Brown #C4A77D"></span></div>
+</a>
+</div>
+<div class="card" data-name="tactile digital / deformable ui" data-type="general">
+<a href="styles/style-60.html" class="c-link">
+<div class="c-top"><span class="c-no">60</span><span class="c-type">General</span></div>
+<h3>Tactile Digital / Deformable UI</h3>
+<div class="dots"><span style="background:#C0C0C0" title="Chrome Silver #C0C0C0"></span><span style="background:#FF9ECD" title="Jelly Pink #FF9ECD"></span><span style="background:#87CEEB" title="Soft Blue #87CEEB"></span></div>
+</a>
+</div>
+<div class="card" data-name="nature distilled" data-type="general">
+<a href="styles/style-61.html" class="c-link">
+<div class="c-top"><span class="c-no">61</span><span class="c-type">General</span></div>
+<h3>Nature Distilled</h3>
+<div class="dots"><span style="background:#C67B5C" title="Terracotta #C67B5C"></span><span style="background:#D4C4A8" title="Sand Beige #D4C4A8"></span><span style="background:#B5651D" title="Warm Clay #B5651D"></span><span style="background:#F5F0E1" title="Soft Cream #F5F0E1"></span><span style="background:#8B4513" title="Earth Brown #8B4513"></span><span style="background:#6B7B3C" title="Olive Green #6B7B3C"></span></div>
+</a>
+</div>
+<div class="card" data-name="interactive cursor design" data-type="general">
+<a href="styles/style-62.html" class="c-link">
+<div class="c-top"><span class="c-no">62</span><span class="c-type">General</span></div>
+<h3>Interactive Cursor Design</h3>
+<div class="dots"></div>
+</a>
+</div>
+<div class="card" data-name="voice-first multimodal" data-type="general">
+<a href="styles/style-63.html" class="c-link">
+<div class="c-top"><span class="c-no">63</span><span class="c-type">General</span></div>
+<h3>Voice-First Multimodal</h3>
+<div class="dots"><span style="background:#FAFAFA" title="Calm neutrals: Soft White #FAFAFA"></span><span style="background:#6B8FAF" title="Muted Blue #6B8FAF"></span><span style="background:#9B8FBB" title="Gentle Purple #9B8FBB"></span></div>
+</a>
+</div>
+<div class="card" data-name="3d product preview" data-type="general">
+<a href="styles/style-64.html" class="c-link">
+<div class="c-top"><span class="c-no">64</span><span class="c-type">General</span></div>
+<h3>3D Product Preview</h3>
+<div class="dots"><span style="background:#E8E8E8" title="neutral backgrounds: Soft Grey #E8E8E8"></span><span style="background:#FFFFFF" title="Pure White #FFFFFF"></span></div>
+</a>
+</div>
+<div class="card" data-name="gradient mesh / aurora evolved" data-type="general">
+<a href="styles/style-65.html" class="c-link">
+<div class="c-top"><span class="c-no">65</span><span class="c-type">General</span></div>
+<h3>Gradient Mesh / Aurora Evolved</h3>
+<div class="dots"><span style="background:#00FFFF" title="Multi-stop gradients: Cyan #00FFFF"></span><span style="background:#FF00FF" title="Magenta #FF00FF"></span><span style="background:#FFFF00" title="Yellow #FFFF00"></span><span style="background:#0066FF" title="Blue #0066FF"></span><span style="background:#00FF66" title="Green #00FF66"></span></div>
+</a>
+</div>
+<div class="card" data-name="editorial grid / magazine" data-type="general">
+<a href="styles/style-66.html" class="c-link">
+<div class="c-top"><span class="c-no">66</span><span class="c-type">General</span></div>
+<h3>Editorial Grid / Magazine</h3>
+<div class="dots"><span style="background:#000000" title="High contrast: Black #000000"></span><span style="background:#FFFFFF" title="White #FFFFFF"></span></div>
+</a>
+</div>
+<div class="card" data-name="chromatic aberration / rgb split" data-type="general">
+<a href="styles/style-67.html" class="c-link">
+<div class="c-top"><span class="c-no">67</span><span class="c-type">General</span></div>
+<h3>Chromatic Aberration / RGB Split</h3>
+<div class="dots"><span style="background:#FF0000" title="Offset RGB: Red #FF0000"></span><span style="background:#00FF00" title="Green #00FF00"></span><span style="background:#0000FF" title="Blue #0000FF"></span><span style="background:#000000" title="Black #000000"></span></div>
+</a>
+</div>
+<div class="card" data-name="vintage analog / retro film" data-type="general">
+<a href="styles/style-68.html" class="c-link">
+<div class="c-top"><span class="c-no">68</span><span class="c-type">General</span></div>
+<h3>Vintage Analog / Retro Film</h3>
+<div class="dots"><span style="background:#F5E6C8" title="Faded Cream #F5E6C8"></span><span style="background:#D4A574" title="Warm Sepia #D4A574"></span><span style="background:#4A7B7C" title="Muted Teal #4A7B7C"></span><span style="background:#E8B4B8" title="Soft Pink #E8B4B8"></span></div>
+</a>
+</div>
+<div class="card" data-name="bauhaus (包豪斯)" data-type="mobile">
+<a href="styles/style-69.html" class="c-link">
+<div class="c-top"><span class="c-no">69</span><span class="c-type">Mobile</span></div>
+<h3>Bauhaus (包豪斯)</h3>
+<div class="dots"><span style="background:#D02020" title="Primary Red #D02020"></span><span style="background:#1040C0" title="Primary Blue #1040C0"></span><span style="background:#F0C020" title="Primary Yellow #F0C020"></span><span style="background:#F0F0F0" title="Background #F0F0F0"></span><span style="background:#121212" title="Foreground #121212"></span><span style="background:#E0E0E0" title="Muted #E0E0E0"></span></div>
+</a>
+</div>
+<div class="card" data-name="minimalist monochrome" data-type="mobile">
+<a href="styles/style-70.html" class="c-link">
+<div class="c-top"><span class="c-no">70</span><span class="c-type">Mobile</span></div>
+<h3>Minimalist Monochrome</h3>
+<div class="dots"><span style="background:#000000" title="Pure Black #000000"></span><span style="background:#FFFFFF" title="Pure White #FFFFFF"></span><span style="background:#F5F5F5" title="Muted #F5F5F5"></span><span style="background:#525252" title="Dark Gray #525252"></span><span style="background:#E5E5E5" title="Border Light #E5E5E5"></span></div>
+</a>
+</div>
+<div class="card" data-name="modern dark (cinema mobile)" data-type="mobile">
+<a href="styles/style-71.html" class="c-link">
+<div class="c-top"><span class="c-no">71</span><span class="c-type">Mobile</span></div>
+<h3>Modern Dark (Cinema Mobile)</h3>
+<div class="dots"><span style="background:#020203" title="Deep #020203"></span><span style="background:#050506" title="Base #050506"></span><span style="background:#0A0A0C" title="Elevated #0A0A0C"></span><span style="background:#5E6AD2" title="Accent #5E6AD2"></span><span style="background:#EDEDEF" title="Foreground #EDEDEF"></span><span style="background:#8A8F98" title="Muted #8A8F98"></span></div>
+</a>
+</div>
+<div class="card" data-name="saas mobile (high-tech boutique)" data-type="mobile">
+<a href="styles/style-72.html" class="c-link">
+<div class="c-top"><span class="c-no">72</span><span class="c-type">Mobile</span></div>
+<h3>SaaS Mobile (High-Tech Boutique)</h3>
+<div class="dots"><span style="background:#0052FF" title="Electric Blue #0052FF"></span><span style="background:#4D7CFF" title="Gradient End #4D7CFF"></span><span style="background:#FAFAFA" title="Background #FAFAFA"></span><span style="background:#0F172A" title="Foreground #0F172A"></span><span style="background:#F1F5F9" title="Muted #F1F5F9"></span><span style="background:#FFFFFF" title="Card #FFFFFF"></span></div>
+</a>
+</div>
+<div class="card" data-name="terminal cli (mobile)" data-type="mobile">
+<a href="styles/style-73.html" class="c-link">
+<div class="c-top"><span class="c-no">73</span><span class="c-type">Mobile</span></div>
+<h3>Terminal CLI (Mobile)</h3>
+<div class="dots"><span style="background:#33FF00" title="Matrix Green #33FF00"></span><span style="background:#050505" title="OLED Black #050505"></span><span style="background:#FFB000" title="Amber #FFB000"></span><span style="background:#1A3D1A" title="Muted Green #1A3D1A"></span><span style="background:#FF3333" title="Error Red #FF3333"></span></div>
+</a>
+</div>
+<div class="card" data-name="kinetic brutalism (mobile)" data-type="mobile">
+<a href="styles/style-74.html" class="c-link">
+<div class="c-top"><span class="c-no">74</span><span class="c-type">Mobile</span></div>
+<h3>Kinetic Brutalism (Mobile)</h3>
+<div class="dots"><span style="background:#DFE104" title="Acid Yellow #DFE104"></span><span style="background:#09090B" title="Rich Black #09090B"></span><span style="background:#FAFAFA" title="Off-white #FAFAFA"></span><span style="background:#27272A" title="Dark Gray #27272A"></span><span style="background:#A1A1AA" title="Zinc #A1A1AA"></span><span style="background:#3F3F46" title="Border Zinc #3F3F46"></span></div>
+</a>
+</div>
+<div class="card" data-name="flat design mobile (touch-first)" data-type="mobile">
+<a href="styles/style-75.html" class="c-link">
+<div class="c-top"><span class="c-no">75</span><span class="c-type">Mobile</span></div>
+<h3>Flat Design Mobile (Touch-First)</h3>
+<div class="dots"><span style="background:#3B82F6" title="Blue #3B82F6"></span><span style="background:#10B981" title="Emerald #10B981"></span><span style="background:#FFFFFF" title="Background #FFFFFF"></span><span style="background:#F3F4F6" title="Surface #F3F4F6"></span><span style="background:#111827" title="Text #111827"></span><span style="background:#F59E0B" title="Amber #F59E0B"></span></div>
+</a>
+</div>
+<div class="card" data-name="material you (md3 mobile)" data-type="mobile">
+<a href="styles/style-76.html" class="c-link">
+<div class="c-top"><span class="c-no">76</span><span class="c-type">Mobile</span></div>
+<h3>Material You (MD3 Mobile)</h3>
+<div class="dots"><span style="background:#6750A4" title="Primary Violet #6750A4"></span><span style="background:#E8DEF8" title="Secondary Container #E8DEF8"></span><span style="background:#7D5260" title="Tertiary #7D5260"></span><span style="background:#FFFBFE" title="Surface #FFFBFE"></span><span style="background:#1C1B1F" title="On Surface #1C1B1F"></span><span style="background:#F3EDF7" title="Surface Container #F3EDF7"></span></div>
+</a>
+</div>
+<div class="card" data-name="neo brutalism (mobile)" data-type="mobile">
+<a href="styles/style-77.html" class="c-link">
+<div class="c-top"><span class="c-no">77</span><span class="c-type">Mobile</span></div>
+<h3>Neo Brutalism (Mobile)</h3>
+<div class="dots"><span style="background:#FFFDF5" title="Cream #FFFDF5"></span><span style="background:#FF6B6B" title="Hot Red #FF6B6B"></span><span style="background:#FFD93D" title="Vivid Yellow #FFD93D"></span><span style="background:#C4B5FD" title="Soft Violet #C4B5FD"></span><span style="background:#000000" title="Pure Black #000000"></span><span style="background:#FFFFFF" title="White #FFFFFF"></span></div>
+</a>
+</div>
+<div class="card" data-name="bold typography (mobile poster)" data-type="mobile">
+<a href="styles/style-78.html" class="c-link">
+<div class="c-top"><span class="c-no">78</span><span class="c-type">Mobile</span></div>
+<h3>Bold Typography (Mobile Poster)</h3>
+<div class="dots"><span style="background:#0A0A0A" title="Near Black #0A0A0A"></span><span style="background:#FAFAFA" title="Warm White #FAFAFA"></span><span style="background:#1A1A1A" title="Muted #1A1A1A"></span><span style="background:#737373" title="Secondary Text #737373"></span><span style="background:#FF3D00" title="Accent Vermillion #FF3D00"></span><span style="background:#262626" title="Border #262626"></span></div>
+</a>
+</div>
+<div class="card" data-name="academia (scholarly mobile)" data-type="mobile">
+<a href="styles/style-79.html" class="c-link">
+<div class="c-top"><span class="c-no">79</span><span class="c-type">Mobile</span></div>
+<h3>Academia (Scholarly Mobile)</h3>
+<div class="dots"><span style="background:#1C1714" title="Mahogany #1C1714"></span><span style="background:#251E19" title="Oak #251E19"></span><span style="background:#E8DFD4" title="Parchment #E8DFD4"></span><span style="background:#3D332B" title="Worn Leather #3D332B"></span><span style="background:#9C8B7A" title="Faded Ink #9C8B7A"></span><span style="background:#C9A962" title="Brass #C9A962"></span></div>
+</a>
+</div>
+<div class="card" data-name="cyberpunk mobile hud" data-type="mobile">
+<a href="styles/style-80.html" class="c-link">
+<div class="c-top"><span class="c-no">80</span><span class="c-type">Mobile</span></div>
+<h3>Cyberpunk Mobile HUD</h3>
+<div class="dots"><span style="background:#0A0A0F" title="Void #0A0A0F"></span><span style="background:#12121A" title="Card #12121A"></span><span style="background:#00FF88" title="Neon Green #00FF88"></span><span style="background:#FF00FF" title="Neon Magenta #FF00FF"></span><span style="background:#00D4FF" title="Cyber Cyan #00D4FF"></span><span style="background:#E0E0E0" title="Neutral Text #E0E0E0"></span></div>
+</a>
+</div>
+<div class="card" data-name="bitcoin defi (mobile)" data-type="mobile">
+<a href="styles/style-81.html" class="c-link">
+<div class="c-top"><span class="c-no">81</span><span class="c-type">Mobile</span></div>
+<h3>Bitcoin DeFi (Mobile)</h3>
+<div class="dots"><span style="background:#F7931A" title="Bitcoin Orange #F7931A"></span><span style="background:#EA580C" title="Burnt Orange #EA580C"></span><span style="background:#FFD600" title="Digital Gold #FFD600"></span><span style="background:#030304" title="Void #030304"></span><span style="background:#0F1115" title="Dark Matter #0F1115"></span><span style="background:#FFFFFF" title="Pure Light #FFFFFF"></span></div>
+</a>
+</div>
+<div class="card" data-name="claymorphism (mobile)" data-type="mobile">
+<a href="styles/style-82.html" class="c-link">
+<div class="c-top"><span class="c-no">82</span><span class="c-type">Mobile</span></div>
+<h3>Claymorphism (Mobile)</h3>
+<div class="dots"><span style="background:#7C3AED" title="Vivid Violet #7C3AED"></span><span style="background:#DB2777" title="Hot Pink #DB2777"></span><span style="background:#F4F1FA" title="Canvas #F4F1FA"></span><span style="background:#332F3A" title="Soft Charcoal #332F3A"></span><span style="background:#10B981" title="Emerald #10B981"></span><span style="background:#F59E0B" title="Amber #F59E0B"></span></div>
+</a>
+</div>
+<div class="card" data-name="enterprise saas (mobile)" data-type="mobile">
+<a href="styles/style-83.html" class="c-link">
+<div class="c-top"><span class="c-no">83</span><span class="c-type">Mobile</span></div>
+<h3>Enterprise SaaS (Mobile)</h3>
+<div class="dots"><span style="background:#4F46E5" title="Indigo #4F46E5"></span><span style="background:#7C3AED" title="Violet #7C3AED"></span><span style="background:#F8FAFC" title="Slate 50 #F8FAFC"></span><span style="background:#FFFFFF" title="White #FFFFFF"></span><span style="background:#0F172A" title="Slate 900 #0F172A"></span><span style="background:#64748B" title="Slate 500 #64748B"></span></div>
+</a>
+</div>
+<div class="card" data-name="sketch hand-drawn (mobile)" data-type="mobile">
+<a href="styles/style-84.html" class="c-link">
+<div class="c-top"><span class="c-no">84</span><span class="c-type">Mobile</span></div>
+<h3>Sketch Hand-Drawn (Mobile)</h3>
+<div class="dots"><span style="background:#FF4D4D" title="Red Marker #FF4D4D"></span><span style="background:#2D2D2D" title="Pencil Black #2D2D2D"></span><span style="background:#FDFBF7" title="Warm Paper #FDFBF7"></span><span style="background:#E5E0D8" title="Old Paper #E5E0D8"></span><span style="background:#2D5DA1" title="Blue Ballpoint #2D5DA1"></span><span style="background:#FFF9C4" title="Post-it Yellow #FFF9C4"></span></div>
+</a>
+</div>
+<div class="card" data-name="neumorphism (mobile)" data-type="mobile">
+<a href="styles/style-85.html" class="c-link">
+<div class="c-top"><span class="c-no">85</span><span class="c-type">Mobile</span></div>
+<h3>Neumorphism (Mobile)</h3>
+<div class="dots"><span style="background:#6C63FF" title="Accent Violet #6C63FF"></span><span style="background:#E0E5EC" title="Clay Base #E0E5EC"></span><span style="background:#3D4852" title="Text Dark #3D4852"></span><span style="background:#6B7280" title="Text Muted #6B7280"></span><span style="background:#D1D9E6" title="Inset Background #D1D9E6"></span></div>
+</a>
+</div></div>
+<footer>Generated from styles.csv · klik kartu untuk buka demo halaman style</footer>
+</div>
+<script>
+var cards=[].slice.call(document.querySelectorAll('.card'));
+var q=document.getElementById('q');
+var count=document.getElementById('count');
+function apply(){
+ var v=q.value.trim().toLowerCase();
+ var n=0;
+ cards.forEach(function(c){
+  var hit=!v||c.dataset.name.indexOf(v)>-1||c.dataset.type.indexOf(v)>-1;
+  c.classList.toggle('show',hit);
+  if(hit)n++;
+ });
+ count.textContent='Menampilkan '+n+' style';
+}
+cards.forEach(function(c){c.classList.add('show')});
+q.addEventListener('input',apply);
+apply();
+</script>
+</body>
+</html>
