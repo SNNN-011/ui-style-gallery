@@ -281,6 +281,148 @@ section{margin-bottom:64px}
 .p-actions{display:flex;gap:10px;margin-bottom:8px}
 .p-tabbar{height:56px;border-top:var(--border);display:flex;align-items:center;justify-content:space-around;font-size:17px;opacity:.75;background:var(--card)}
 .p-tabbar .on{color:var(--accent);opacity:1}
+/* ---- variant css ---- */
+.split-panel{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding:30px 0}
+.sp-sub{font-size:15px;line-height:1.65;opacity:.75;margin:18px 0 0;max-width:44ch}
+.sp-right{display:flex;flex-direction:column;gap:12px}
+.sp-card{background:var(--card);border:var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 24px;display:flex;justify-content:space-between;align-items:center}
+.sp-card b{font-size:12px;text-transform:uppercase;letter-spacing:.12em;opacity:.65}
+.sp-card .big{font-size:26px;font-weight:800;font-family:var(--fh)}
+.m3-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;padding:40px 0}
+.m3-card{border-top:3px solid var(--ink);padding-top:18px;opacity:.9}
+.m3-no{font-family:'JetBrains Mono',monospace;font-size:12px;opacity:.5;display:block;margin-bottom:12px}
+.m3-card h3{font-size:17px;margin-bottom:8px}
+.m3-card p{font-size:13.5px;line-height:1.6;opacity:.75}
+.spread{display:grid;grid-template-columns:1.15fr 1fr;gap:0;border:var(--border);box-shadow:var(--shadow);background:var(--card)}
+.spread-visual{background:var(--accent);color:#fff;min-height:380px;display:flex;align-items:flex-end;padding:30px;position:relative}
+.spread-art span{font-size:11px;letter-spacing:.3em;opacity:.8;position:absolute;top:24px;left:30px}
+.spread-h{font-size:clamp(2rem,4.5vw,3.4rem);font-weight:900;line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+.spread-body{padding:38px;display:flex;flex-direction:column;justify-content:center}
+.spread-kicker{font-size:11px;letter-spacing:.24em;opacity:.6;margin-bottom:14px}
+.spread-sub{font-size:clamp(1.1rem,2vw,1.5rem);line-height:1.35;margin-bottom:16px}
+.spread-p{font-size:14px;line-height:1.7;opacity:.8}
+.spread-meta{display:flex;gap:18px;margin-top:22px;font-size:11px;letter-spacing:.18em;opacity:.6}
+.chapter-block{max-width:720px;margin:0 auto}
+.chapter{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:26px 0;border-bottom:1px solid var(--border)}
+.chapter:last-child{border-bottom:none}
+.ch-num{font-family:var(--fh);font-size:26px;opacity:.4}
+.ch-body h3{font-size:18px;margin-bottom:8px}
+.ch-body p{font-size:14px;line-height:1.65;opacity:.8}
+.raw-marquee{margin-bottom:20px}
+.raw-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:18px}
+.raw-list{border:var(--border);box-shadow:var(--shadow);background:var(--card)}
+.raw-row{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:12px;padding:15px 18px;border-bottom:var(--border);font-size:13.5px}
+.raw-row:last-child{border-bottom:none}
+.rw-idx{font-family:'JetBrains Mono',monospace;font-size:11px;opacity:.5}
+.raw-row b{font-size:12px;letter-spacing:.12em}
+.raw-card{border:var(--border);box-shadow:var(--shadow);background:var(--card);padding:22px;display:flex;flex-direction:column;gap:14px}
+.raw-stat{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:12px;border-bottom:var(--border)}
+.big2{font-size:30px;font-weight:900;font-family:var(--fh)}
+.raw-stat span{font-size:11px;letter-spacing:.16em}
+.wide2{width:100%;padding:16px}
+.d2-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px}
+.d2-title b{font-size:19px;font-family:var(--fh)}
+.d2-range{font-size:12.5px;opacity:.65;margin-left:12px}
+.d2-actions{display:flex;gap:8px}
+.d2-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
+.sparkline{font-size:16px;letter-spacing:1px;margin-top:8px;opacity:.8}
+.d3-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.d3-widget{background:var(--card);border:var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+.d3-tag{font-size:10.5px;letter-spacing:.16em;opacity:.6;display:block;margin-bottom:12px}
+.d3-num{font-size:30px;font-weight:800;font-family:var(--fh);letter-spacing:-.02em}
+.d3-delta{font-size:12.5px;font-weight:700;margin:4px 0 12px}
+.bars.mini{height:60px;padding:10px;box-shadow:none;border:none;background:var(--bg)}
+.d3-seg{margin-bottom:10px}
+.d3-seg b{display:block;font-size:15px;margin-bottom:4px}
+.d3-seg span{font-size:12px;opacity:.65}
+.glass-full{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;padding:52px 46px;border-radius:30px;align-items:center}
+.gf-left h2{font-size:clamp(1.8rem,4vw,2.9rem);line-height:1.05;letter-spacing:-.02em;margin:14px 0}
+.gf-left p{font-size:15px;line-height:1.65;opacity:.9;max-width:44ch}
+.gf-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.gf-row:last-child{border-bottom:none}
+.gf-row > span{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.gf-row b{font-size:14.5px;display:block;margin-bottom:3px}
+.gf-row p{font-size:12.5px;opacity:.75}
+.glass-chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.hud-row3{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:14px}
+.hud-panel.b{padding:22px}
+.hud-bars.tall{height:130px}
+.hud-sys{display:flex;align-items:center;gap:10px;font-size:12.5px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.07);font-family:'JetBrains Mono',monospace}
+.hud-sys:last-child{border-bottom:none}
+.hud-sys b{margin-left:auto}
+.hud-dot{width:8px;height:8px;border-radius:50%;background:var(--muted);flex-shrink:0}
+.hud-dot.on{background:#22C55E;box-shadow:0 0 8px #22C55E}
+.hud-dot.warn{background:#F59E0B}
+.hud-dot.err{background:#EF4444;animation:pulse 1s infinite}
+.c2{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.c2-h{font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.02;letter-spacing:-.03em;margin:12px 0 16px}
+.c2-p{font-size:15px;line-height:1.65;opacity:.8;max-width:42ch}
+.c2-controls{padding:22px}
+.c3{max-width:760px;margin:0 auto}
+.c3-hero{text-align:center;margin-bottom:34px}
+.c3-h{font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.02em;margin:10px 0}
+.c3-p{font-size:14.5px;opacity:.75}
+.c3-block{display:flex;gap:18px;align-items:flex-start;padding:22px 26px;margin-bottom:14px}
+.c3-block .ico{margin-bottom:0;flex-shrink:0}
+.c3-block h3{font-size:15.5px;margin-bottom:5px}
+.c3-block p{font-size:13.5px;opacity:.78;line-height:1.6}
+.c4{max-width:860px;margin:0 auto}
+.c4-row{display:grid;grid-template-columns:200px 1fr;gap:34px;align-items:center;padding:26px 0;border-bottom:1px solid var(--border)}
+.c4-row.flip{grid-template-columns:1fr 200px}
+.c4-row.flip .c4-visual{order:2}
+.c4-art{height:130px;border-radius:var(--radius);background:var(--card);border:var(--border);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;font-size:40px}
+.c4-text h3{font-size:19px;margin-bottom:8px}
+.c4-text p{font-size:14px;line-height:1.65;opacity:.8;max-width:52ch}
+.l2-hero{text-align:center;padding:44px 0 10px}
+.l2-h{font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.03em;line-height:1.04;margin:12px 0 14px}
+.l2-p{font-size:15.5px;opacity:.8;max-width:52ch;margin:0 auto}
+.cta-row.center{justify-content:center}
+.l3{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.l3-form{padding:30px}
+.l3-h{font-size:22px;margin:10px 0 20px}
+.form-stack{display:flex;flex-direction:column;gap:12px}
+.form-stack .btn{padding:15px}
+.l3-note{font-size:12.5px;text-align:center;opacity:.65}
+.l3-side{display:flex;flex-direction:column;gap:12px}
+.l3-trust{background:var(--card);border:var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+.l3-trust b{font-size:13.5px}
+.l3-trust span{font-size:12px;opacity:.6}
+.voice-shell{display:flex;justify-content:center}
+.voice-card{max-width:560px;padding:44px;text-align:center}
+.v-orb{position:relative;width:150px;height:150px;margin:0 auto 22px;display:flex;align-items:center;justify-content:center}
+.v-core{width:74px;height:74px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;position:relative;z-index:2}
+.v-ring{position:absolute;border-radius:50%;border:2px solid var(--accent);opacity:.5;animation:ring 2.4s ease-out infinite}
+.v-ring.r1{inset:6px}.v-ring.r2{inset:6px;animation-delay:1.2s}
+@keyframes ring{0%{transform:scale(.92);opacity:.55}100%{transform:scale(1.18);opacity:0}}
+.v-status{font-size:14px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px}
+.listening-dot{width:10px;height:10px;border-radius:50%;background:#22C55E;animation:pulse 1.5s infinite}
+.wave{display:flex;align-items:center;justify-content:center;gap:3px;height:52px;margin-bottom:20px}
+.wave i{width:5px;border-radius:3px;background:var(--accent);animation:wave 1s ease-in-out infinite}
+.wave i:nth-child(2n){animation-delay:.12s}.wave i:nth-child(3n){animation-delay:.24s}.wave i:nth-child(4n){animation-delay:.36s}
+@keyframes wave{0%,100%{height:10px}50%{height:48px}}
+.v-transcript{font-size:14.5px;line-height:1.6;padding:18px;margin-bottom:18px;font-style:italic}
+.v-hints{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.p-big-num{font-size:clamp(8rem,30vw,22rem);font-weight:900;line-height:.8;letter-spacing:-.06em;opacity:.14;font-family:var(--fh)}
+.p-title-row{display:flex;justify-content:space-between;margin:26px 0;font-size:11px;letter-spacing:.28em;opacity:.6;font-family:'JetBrains Mono',monospace}
+.p-stat-row{display:flex;justify-content:center;gap:56px;margin:30px 0}
+.p-stat-row b{font-size:42px;font-weight:900;font-family:var(--fh);display:block;letter-spacing:-.03em}
+.p-stat-row span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.6}
+.p3{display:grid;grid-template-columns:1fr 1fr;min-height:420px;border:var(--border);box-shadow:var(--shadow)}
+.p3-block{padding:40px;display:flex;flex-direction:column;justify-content:flex-end;gap:14px}
+.p3-a{background:var(--accent);color:#fff}
+.p3-b{background:var(--card);color:var(--card-ink)}
+.p3-label{font-size:11px;letter-spacing:.3em;text-transform:uppercase;opacity:.7}
+.p3-h{font-size:clamp(2rem,5vw,3.8rem);font-weight:900;line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+.p3-foot{grid-column:1/-1;display:flex;justify-content:space-between;padding:14px 22px;border-top:var(--border);font-size:11px;letter-spacing:.2em;opacity:.6;font-family:'JetBrains Mono',monospace}
+.p-list{display:flex;flex-direction:column;gap:10px}
+.p-msg{display:flex;gap:12px;align-items:flex-start;padding:14px;margin-bottom:10px}
+.p-ava{width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0}
+.p-msg b{font-size:13.5px;display:block}
+.p-msg p{font-size:12.5px;opacity:.75;margin:3px 0;line-height:1.45}
+.p-time{font-size:10.5px;opacity:.5}
+.p-settings{padding:8px 16px;margin-bottom:14px}
+.p-settings .ctrl-row{border:none;box-shadow:none;background:transparent;padding:10px 0;margin-bottom:0;border-bottom:1px solid rgba(128,128,128,.15)}
+.p-settings .ctrl-row:last-child{border-bottom:none}
 @media (max-width:900px){
 .feature-grid,.glass-cards,.price-row{grid-template-columns:1fr}
 .kpi-row{grid-template-columns:repeat(2,1fr)}
@@ -305,7 +447,7 @@ section{margin-bottom:64px}
 </div>
 <div class="wrap">
 <section class="hero">
-<span class="tag">General &middot; 1970s-90s Analog Revival &middot; Complexity: Medium &middot; <b>layout: magazine grid</b></span>
+<span class="tag">General &middot; 1970s-90s Analog Revival &middot; Complexity: Medium &middot; <b>layout: feature spread</b></span>
 <h1>Style 68: Vintage Analog / Retro Film</h1>
 <p>Film grain, VHS, cassette tape, polaroid, analog warmth, faded colors, light leaks, vintage photography</p>
 <div class="badges">
@@ -316,20 +458,14 @@ section{margin-bottom:64px}
 <span class="badge">Conversion: ✓ High</span>
 </div>
 </section>
-<div class="masthead"><span>THE DAILY LAYOUT</span><span>Vol. 84 &mdash; Design Review</span></div>
-<div class="article-head">
-<h2 class="art-h">Why style systems fail &mdash; and the ones that don't</h2>
-<div class="byline">By A. Designer &middot; 8 min read &middot; Filed under Interface</div>
+<div class="spread">
+<div class="spread-visual"><div class="spread-art"><span>VOL.84</span><h2 class="spread-h">The<br>Feature<br>Spread</h2></div></div>
+<div class="spread-body">
+<span class="spread-kicker">COVER STORY</span>
+<h3 class="spread-sub">One image, one headline, one story — the rest of the page serves it.</h3>
+<p class="spread-p">Editorial layout gives the hero full runway. The copy below is set in a measure built for reading: 60-70 characters, generous leading, and a quiet grid underneath.</p>
+<div class="spread-meta"><span>PHOTOGRAPHY</span><span>ESSAY</span><span>6 MIN</span></div>
 </div>
-<div class="art-cols">
-<div class="art-main">
-<p class="dropcap">Every system starts with good intentions: tokens, components, a shared language. And yet most die quietly under the weight of exceptions nobody documented.</p>
-<p>The survivors share one trait — they treat the grid as a contract. Columns are not suggestions; spacing is not a feeling. What looks like restraint is actually the discipline of saying no.</p>
-</div>
-<aside class="art-side">
-<div class="pullq">&#8220;Restraint is the discipline of saying no.&#8221;</div>
-<div class="side-card"><b>Related</b><p>The return of the drop cap<br>Grids that breathe</p></div>
-</aside>
 </div><section><div class="sec-h"><h2>Editorial Body</h2><small>General</small></div><div class="article-body"><p class="dropcap">Typography is the voice of the interface. It whispers hierarchy, shouts emphasis, and quietly sets the mood before a single word is read. In great editorial design, every paragraph earns its measure and every headline earns its weight.</p>
 <p>Structure arrives through contrast: tight headlines against airy body text, rule lines that divide without shouting, and margins that let content breathe. The grid is the scaffolding; the type is the building.</p></div></section><section><div class="sec-h"><h2>Testimonial Quote</h2><small>General</small></div><blockquote class="bigq">&#8220;The best part is how invisible it gets &mdash; the design does its job without ever showing off.&#8221;</blockquote><p class="cmut">— Jamie R., Head of Product</p></section><section><div class="sec-h"><h2>Timeline</h2><small>General</small></div><div class="tl"><div class="tl-item"><span class="tl-dot"></span><div><b>Q1</b><p>Research & discovery</p></div></div><div class="tl-item"><span class="tl-dot"></span><div><b>Q2</b><p>MVP build</p></div></div><div class="tl-item"><span class="tl-dot"></span><div><b>Q3</b><p>Private beta</p></div></div><div class="tl-item"><span class="tl-dot"></span><div><b>Q4</b><p>Public launch</p></div></div></div></section><section><div class="sec-h"><h2>Data Table</h2><small>General</small></div><div class="table-wrap"><table class="tbl"><thead><tr><th>Company</th><th>Segment</th><th>MRR</th><th>Status</th></tr></thead><tbody><tr><td>Acme Corp</td><td>Enterprise</td><td>$12,400</td><td><span class="okchip">Active</span></td></tr><tr><td>Northwind</td><td>Startup</td><td>$2,150</td><td><span class="okchip">Trial</span></td></tr><tr><td>Vertex Lab</td><td>Mid-market</td><td>$6,800</td><td><span class="okchip">Active</span></td></tr><tr><td>Luma Inc</td><td>Enterprise</td><td>$24,900</td><td><span class="okchip">Active</span></td></tr><tr><td>Halcyon</td><td>Startup</td><td>$980</td><td><span class="okchip">Churned</span></td></tr></tbody></table></div></section>
 <section>
