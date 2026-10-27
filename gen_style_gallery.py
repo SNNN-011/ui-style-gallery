@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Generate 84 HTML demo pages, one per UI style. Each page uses a distinct
+"""Generate 85 HTML demo pages, one per UI style. Each page uses a distinct
 layout archetype + signature components so styles differ structurally, not just in skin."""
 import csv, re, os, html
 
@@ -71,6 +71,26 @@ R[50] = dict(bg="#FFFFFF", ink="#000000", muted="#525252", accent="#FF3D00", car
 R[51] = dict(bg="#000812", ink="#00FFFF", muted="#7FB8C9", accent="#00FFFF", a2="#FF0000", card="rgba(0,255,255,.04)", card_ink="#00FFFF", radius="0px", border="1px solid rgba(0,255,255,.4)", shadow="0 0 14px rgba(0,255,255,.2)", fh="JetBrains Mono", fb="JetBrains Mono", fx="body::after{content:'';position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(0,255,255,.03) 3px 4px);z-index:999}")
 R[52] = dict(bg="#1A1C2C", ink="#FFFFFF", muted="#B0B5CC", accent="#FFD300", card="#242742", card_ink="#FFFFFF", radius="0px", border="4px solid #0D0E17", shadow="4px 4px 0 #0D0E17", fh="Press Start 2P", fb="VT323", fx=".btn{box-shadow:4px 4px 0 #0D0E17;text-transform:uppercase;image-rendering:pixelated}")
 R[53] = dict(bg="#F5F5F7", ink="#1D1D1F", muted="#86868B", accent="#1D1D1F", card="#FFFFFF", card_ink="#1D1D1F", radius="20px", border="none", shadow="0 2px 10px rgba(0,0,0,.04)", fh="Inter", fb="Inter")
+R[54] = dict(bg="#0B3A6F", ink="#EAF2FF", muted="#9CC0E4", accent="#7FD4FF", a2="#FFD98A", card="rgba(10,42,80,.55)", card_ink="#EAF2FF", radius="0px", border="1px solid rgba(127,212,255,.35)", shadow="none", fh="JetBrains Mono", fb="Inter", fx=""".bp-sheet{border:1px solid rgba(127,212,255,.55);background:#0A2A50;box-shadow:0 0 0 1px rgba(127,212,255,.15) inset}
+.bp-head,.bp-stamp{display:flex;justify-content:space-between;gap:12px;padding:9px 14px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#9CC0E4;border-bottom:1px solid rgba(127,212,255,.35)}
+.bp-stamp{border-bottom:none;border-top:1px solid rgba(127,212,255,.35)}
+.bp-body{padding:26px;display:grid;grid-template-columns:1.5fr .5fr;gap:22px}
+.bp-frame{position:relative;border:1px dashed rgba(127,212,255,.45);min-height:260px;display:flex;align-items:center;justify-content:center;padding:34px;background-image:linear-gradient(rgba(127,212,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(127,212,255,.13) 1px,transparent 1px);background-size:22px 22px}
+.bp-center{text-align:center;border:1px solid rgba(127,212,255,.5);padding:22px 30px;background:rgba(10,42,80,.72)}
+.bp-center b{display:block;font-size:12.5px;letter-spacing:.22em}
+.bp-center span{font-size:11px;color:#9CC0E4;letter-spacing:.06em}
+.bp-dim{position:absolute;display:flex;align-items:center;gap:6px;font-size:10.5px;color:#9CC0E4;letter-spacing:.12em}
+.bp-dim i{flex:1;height:1px;background:rgba(127,212,255,.6);position:relative}
+.bp-dim-h{left:14px;right:14px;top:8px}.bp-dim-v{flex-direction:column;top:14px;bottom:14px;right:8px;width:auto}
+.bp-dim-v i{width:1px;height:auto;flex:1}
+.bp-callout{position:absolute;display:flex;align-items:center;gap:7px;font-size:10.5px;color:#9CC0E4}
+.bp-callout b{width:19px;height:19px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(127,212,255,.7);font-size:10.5px;color:#EAF2FF}
+.bp-c1{top:46px;left:18px}.bp-c2{bottom:52px;left:18px}.bp-c3{bottom:120px;right:32px}
+.bp-legend{display:flex;flex-direction:column;gap:10px;font-size:11px;color:#9CC0E4}
+.bp-lg{display:flex;align-items:center;gap:9px}
+.bp-lg i{width:26px;height:1px;flex-shrink:0}
+.bp-lg .l1{background:#7FD4FF}.bp-lg .l2{background:repeating-linear-gradient(90deg,#7FD4FF 0 5px,transparent 5px 9px)}
+.bp-lg .l3{height:11px;background:repeating-linear-gradient(45deg,rgba(127,212,255,.7) 0 1px,transparent 1px 4px);border:1px solid rgba(127,212,255,.5)}""")
 R[55] = dict(bg="linear-gradient(160deg,#0A0A1E 0%,#1B1040 60%,#3A2E6E 100%)", ink="#FFFFFF", muted="rgba(255,255,255,.75)", accent="#A78BFA", card="rgba(255,255,255,.16)", card_ink="#FFFFFF", radius="28px", border="1px solid rgba(255,255,255,.3)", shadow="0 24px 60px rgba(0,0,0,.45)", fh="Inter", fb="Inter", fx=".glass{backdrop-filter:blur(40px) saturate(180%);-webkit-backdrop-filter:blur(40px) saturate(180%)}")
 R[56] = dict(bg="#FDFBF7", ink="#1A1A1A", muted="#4A4A4A", accent="#1A1A1A", card="#FFFFFF", card_ink="#1A1A1A", radius="0px", border="1px solid #E0E0E0", shadow="none", fh="Source Serif 4", fb="Georgia", fx="body{transition:none}.card,.btn,.chip{transition:none}")
 R[57] = dict(bg="#FFFFFF", ink="#111111", muted="#555555", accent="#FF00FF", a2="#00FF00", card="#FFF9C4", card_ink="#111111", radius="0px", border="3px dashed #111111", shadow="5px 5px 0 #111111", fh="Archivo", fb="Inter", fx=".marquee{overflow:hidden;white-space:nowrap;background:#00FF00;color:#000;border:2px solid #000}.marquee span{display:inline-block;animation:marq 8s linear infinite}@keyframes marq{from{transform:translateX(100%)}to{transform:translateX(-100%)}}")
@@ -105,7 +125,6 @@ R[84] = dict(bg="#FDFBF7", ink="#2D2D2D", muted="#6B6B6B", accent="#FF4D4D", a2=
 # ---------------- layout archetypes (structural) ----------------
 ARCH = {}
 for i in range(1, 86):
-    if i == 54: continue
     ARCH[i] = "centered"
 arch_assign = {
     1:"minimal", 2:"centered", 3:"glass", 4:"brutal", 5:"poster", 6:"brutal", 7:"centered",
@@ -116,7 +135,7 @@ arch_assign = {
     32:"dashboard", 33:"dashboard", 34:"dashboard", 35:"dashboard", 36:"dashboard",
     37:"dashboard", 38:"brutal", 39:"bento", 40:"centered", 41:"hud", 42:"centered",
     43:"chat", 44:"centered", 45:"poster", 46:"centered", 47:"poster", 48:"poster",
-    49:"editorial", 50:"minimal", 51:"hud", 52:"brutal", 53:"bento", 55:"glass",
+    49:"editorial", 50:"minimal", 51:"hud", 52:"brutal", 53:"bento", 54:"blueprint", 55:"glass",
     56:"editorial", 57:"brutal", 58:"centered", 59:"editorial", 60:"centered",
     61:"centered", 62:"centered", 63:"chat", 64:"centered", 65:"glass", 66:"editorial",
     67:"poster", 68:"editorial", 69:"poster", 70:"editorial", 71:"mobile", 72:"mobile",
@@ -138,7 +157,7 @@ vv({1:"v1",2:"v2",3:"v1",4:"v1",5:"v2",6:"v2",7:"v1",8:"v2",9:"v2",10:"v2",11:"v
     22:"v2",23:"v1",24:"v2",25:"v1",26:"v3",27:"v3",28:"v1",29:"v2",30:"v1",31:"v3",
     32:"v1",33:"v3",34:"v2",35:"v3",36:"v1",37:"v3",38:"v1",39:"v1",40:"v2",41:"v1",
     42:"v4",43:"v1",44:"v3",45:"v3",46:"v1",47:"v1",48:"v2",49:"v2",50:"v1",51:"v2",
-    52:"v2",53:"v1",55:"v1",56:"v1",57:"v2",58:"v4",59:"v2",60:"v2",61:"v3",62:"v1",
+    52:"v2",53:"v1",54:"v1",55:"v1",56:"v1",57:"v2",58:"v4",59:"v2",60:"v2",61:"v3",62:"v1",
     63:"v2",64:"v3",65:"v2",66:"v1",67:"v3",68:"v2",69:"v1",70:"v1",71:"v1",72:"v3",
     73:"v1",74:"v2",75:"v2",76:"v3",77:"v2",78:"v1",79:"v3",80:"v2",81:"v1",82:"v2",
     83:"v3",84:"v2",85:"v2"})
@@ -159,6 +178,7 @@ default_comps = dict(
     chat=["chat","steps","search"],
     poster=["stat","quote","table","steps"],
     mobile=["toggle","slider","avatar","badges","steps","search"],
+    blueprint=["table","steps","alerts"],
 )
 comp_overrides = {
     2:["toggle","slider","badges"], 9:["toggle","slider","avatar"], 16:["toggle","slider","badges"],
@@ -166,7 +186,7 @@ comp_overrides = {
     30:["kpi","gauge","stat"], 31:["alerts","ticker","kpi"], 32:["breadcrumb","table","steps"],
     33:["table","kpi","bars"], 34:["table","gauge","alerts"], 35:["funnel","table","steps"],
     36:["table","kpi","bars"], 37:["gauge","table","kpi"], 43:["chat","search","steps"],
-    52:["table","alerts","steps"], 57:["marquee","badges","quote"], 63:["chat","search"],
+    52:["table","alerts","steps"], 54:["table","steps","alerts"], 57:["marquee","badges","quote"], 63:["chat","search"],
     73:["term","table","alerts"], 79:["dropcap","quote","timeline"], 80:["gauge","ticker","stat"],
     81:["gauge","table","badges"],
 }
@@ -401,6 +421,7 @@ ARCH_NOTE = {
     "chat": ("conversational surface", {"v1":"assistant chat", "v2":"voice-first chat"}),
     "poster": ("typographic statement", {"v1":"giant stack type", "v2":"number + meta poster", "v3":"split type blocks"}),
     "mobile": ("touch-first phone layout", {"v1":"wallet home", "v2":"list / conversation", "v3":"stats & settings"}),
+    "blueprint": ("drafting sheet grid", {"v1":"sheet + dimension callouts"}),
 }
 def hero_base(sid, row, r, arch, variant):
     name = row["Style Category"].strip()
@@ -459,7 +480,7 @@ def arch_minimal_v3(row, r):
 
 def arch_editorial_v1(row, r):
     return hero_base(int(row["No"]), row, r, "editorial", "v1") + """
-<div class="masthead"><span>THE DAILY LAYOUT</span><span>Vol. 84 &mdash; Design Review</span></div>
+<div class="masthead"><span>THE DAILY LAYOUT</span><span>Vol. 85 &mdash; Design Review</span></div>
 <div class="article-head">
 <h2 class="art-h">Why style systems fail &mdash; and the ones that don't</h2>
 <div class="byline">By A. Designer &middot; 8 min read &middot; Filed under Interface</div>
@@ -838,13 +859,13 @@ def arch_poster_v1(row, r):
 <h2 class="p-h">MAKE<br>IT<br>LOUD.</h2>
 <p class="p-sub">Type is the interface. Everything else is decoration.</p>
 <div class="p-cta">START NOW <span class="p-arr">&#8594;</span></div>
-<div class="p-meta"><span>EST. 2026</span><span>84 STYLES</span><span>NO. %s</span></div>
+<div class="p-meta"><span>EST. 2026</span><span>85 STYLES</span><span>NO. %s</span></div>
 </section>""" % (int(row["No"]), int(row["No"]))
 
 def arch_poster_v2(row, r):
     return hero_base(int(row["No"]), row, r, "poster", "v2") + """
 <section class="poster">
-<div class="p-big-num">84</div>
+<div class="p-big-num">85</div>
 <div class="p-title-row"><span class="p-kicker">STYLE INDEX</span><span class="p-kicker">2026 EDITION</span></div>
 <div class="p-stat-row">
 <div><b>13</b><span>layouts</span></div>
@@ -925,9 +946,51 @@ def arch_mobile_v3(row, r):
 </div>
 </section>"""
 
+def arch_blueprint_v1(row, r):
+    return hero_base(int(row["No"]), row, r, "blueprint", "v1") + """
+<section>
+<div class="sec-h"><h2>Drafting Sheet</h2><small>DWG-054 &middot; scale 1:1 &middot; rev C</small></div>
+<div class="bp-sheet">
+<div class="bp-head"><span>UI / LAYOUT SHEET</span><span>GRID 12 COL &middot; GUTTER 24</span></div>
+<div class="bp-body">
+<div class="bp-frame">
+<div class="bp-dim bp-dim-h"><i></i><span>1024</span></div>
+<div class="bp-dim bp-dim-v"><i></i><span>640</span></div>
+<div class="bp-center"><b>PRIMARY WORK AREA</b><span>content column &middot; 1024 &times; 640</span></div>
+<div class="bp-callout bp-c1"><b>A</b><span>title block</span></div>
+<div class="bp-callout bp-c2"><b>B</b><span>dimension line</span></div>
+<div class="bp-callout bp-c3"><b>C</b><span>hatch fill</span></div>
+</div>
+<div class="bp-legend">
+<div class="bp-lg"><i class="l1"></i><span>A &mdash; solid stroke, 1px</span></div>
+<div class="bp-lg"><i class="l2"></i><span>B &mdash; dashed guide, 1px</span></div>
+<div class="bp-lg"><i class="l3"></i><span>C &mdash; 45&deg; hatch, 4px pitch</span></div>
+<div class="bp-lg"><i class="l1"></i><span>All strokes hairline, no blur</span></div>
+</div>
+</div>
+<div class="bp-stamp"><span>DRAWN: gallery</span><span>CHECKED: &mdash;</span><span>REV C</span></div>
+</div>
+</section>
+<section>
+<div class="sec-h"><h2>Part Schedule</h2><small>annotation keys resolved from the sheet above</small></div>
+<div class="table-wrap"><table class="tbl">
+<thead><tr><th>Key</th><th>Part</th><th>Spec</th><th>Qty</th></tr></thead>
+<tbody>
+<tr><td><b>A</b></td><td>Title block</td><td>Mono 10.5px, tracking .2em, uppercase</td><td>1</td></tr>
+<tr><td><b>B</b></td><td>Dimension line</td><td>1px, terminal ticks, label centred</td><td>4</td></tr>
+<tr><td><b>C</b></td><td>Hatch fill</td><td>45&deg; repeating-linear-gradient, 1px on 4px</td><td>3</td></tr>
+<tr><td><b>D</b></td><td>Grid overlay</td><td>22px cell, 13% cyan on navy</td><td>1</td></tr>
+</tbody></table></div>
+</section>
+<section>
+<div class="sec-h"><h2>Annotation Rules</h2><small>how the sheet is read</small></div>
+<div class="al info"><b>A</b><span>Label every region with a lettered key, then resolve it in the part schedule. No label floats unreferenced.</span></div>
+<div class="al warn"><b>!</b><span>Hairlines only: 1px solid or 1px dashed. Drop shadows belong to the paper, not the parts.</span></div>
+<div class="al ok"><b>&#10003;</b><span>Cyan on blueprint navy holds AA at 11px and up &mdash; keep labels at that floor, never smaller.</span></div>
+</section>"""
+
 ARCH_BUILDERS = {
-    ("minimal","v1"): arch_minimal_v1, ("minimal","v2"): arch_minimal_v2, ("minimal","v3"): arch_minimal_v3,
-    ("editorial","v1"): arch_editorial_v1, ("editorial","v2"): arch_editorial_v2, ("editorial","v3"): arch_editorial_v3,
+    ("minimal","v1"): arch_minimal_v1, ("minimal","v2"): arch_minimal_v2, ("minimal","v3"): arch_minimal_v3,    ("editorial","v1"): arch_editorial_v1, ("editorial","v2"): arch_editorial_v2, ("editorial","v3"): arch_editorial_v3,
     ("bento",""): arch_bento,
     ("brutal","v1"): arch_brutal_v1, ("brutal","v2"): arch_brutal_v2,
     ("dashboard","v1"): arch_dashboard_v1, ("dashboard","v2"): arch_dashboard_v2, ("dashboard","v3"): arch_dashboard_v3,
@@ -940,6 +1003,7 @@ ARCH_BUILDERS = {
     ("chat","v1"): arch_chat_v1, ("chat","v2"): arch_chat_v2,
     ("poster","v1"): arch_poster_v1, ("poster","v2"): arch_poster_v2, ("poster","v3"): arch_poster_v3,
     ("mobile","v1"): arch_mobile_v1, ("mobile","v2"): arch_mobile_v2, ("mobile","v3"): arch_mobile_v3,
+    ("blueprint","v1"): arch_blueprint_v1,
 }
 
 # ================= page template =================
@@ -1364,15 +1428,16 @@ section{margin-bottom:64px}
 .bento{grid-template-columns:repeat(2,1fr)}
 .steps,.stat-band{grid-template-columns:repeat(2,1fr)}
 .info-grid{grid-template-columns:1fr}
+.bp-body{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 <div class="topnav">
-<a href="../index.html">&#9776; All 84 Styles</a>
+<a href="../index.html">&#9776; All 85 Styles</a>
 <span class="sp"></span>
 <a href="%%PREV%%">&#8592; Prev</a>
-<span style="opacity:.55">%%ID%%/84</span>
+<span style="opacity:.55">%%ID%%/85</span>
 <a href="%%NEXT%%">Next &#8594;</a>
 </div>
 <div class="wrap">
@@ -1554,16 +1619,16 @@ footer{margin-top:60px;font-size:13px;color:#5C7A68;text-align:center}
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UI Style Gallery — 84 Styles</title>
+<title>UI Style Gallery — 85 Styles</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>__INDEX_CSS__</style>
 </head>
 <body>
 <div class="wrap">
 <h1>UI Style Gallery</h1>
-<p class="sub"><b>84 halaman demo</b> — tiap style punya layout &amp; komponen khas berbeda</p>
+<p class="sub"><b>85 halaman demo</b> — tiap style punya layout &amp; komponen khas berbeda</p>
 <input class="search" id="q" placeholder="Cari style... (mis. neumorphism, dark, brutal, bento)">
-<p class="count" id="count">Menampilkan 84 style</p>
+<p class="count" id="count">Menampilkan 85 style</p>
 <div class="grid">__CARDS__</div>
 <footer>Generated from styles.csv · klik kartu untuk buka demo halaman style</footer>
 </div>
